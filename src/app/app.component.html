@@ -19,6 +19,6 @@
   <span>Employee data: {{employee | json}}</span>
 </div>
 <input type="file" (change)="uploadFile($event.target.files)">
-<ng-container *ngIf="uploadSuccess">
-   Upload Successful
- </ng-container>
+<div>
+  <input type="text" (keyup.enter)="focusoutHandler($event.target.value)"/>
+</div>

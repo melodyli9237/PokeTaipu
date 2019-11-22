@@ -34,14 +34,23 @@ class Employees_Name(Resource):
         return jsonify(result)
 
 @app.route('/file', methods = ['POST'])
-def analyzeText():
+def analyseFile():
     print("running server side post")
-    # data = json.loads(request.data.decode())
+    # run code
+    # return jsonified type
     return jsonify({'text':'Hello World!'})
+
+@app.route('/path', methods = ['POST'])
+def analysePath():
+    print("user input path received")
+    print(request.data)
+    # run_model(filePath=request.data)
+    # return jsonified({'text':'lable of your image is water'})
+    return jsonify({'text':'user input path received'})
 
 api.add_resource(Employees, '/employees') # Route_1
 api.add_resource(Employees_Name, '/employees/<employee_id>') # Route_3
-api.add_resource(Employees, '/file')
+#api.add_resource(Employees, '/file')
 
 if __name__ == '__main__':
      print("running server side get")

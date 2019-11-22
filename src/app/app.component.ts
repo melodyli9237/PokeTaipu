@@ -13,11 +13,22 @@ export class AppComponent {
   employee:JSON;
   percentDone: number;
   uploadSuccess: boolean;
+  path:string;
   constructor(private httpClient: HttpClient) {
   }
 
   ngOnInit() {
   }
+
+   focusoutHandler(path: string) {
+       this.path = path;
+       console.log(event);
+       console.log("path:",path)
+       this.httpClient.post('http://127.0.0.1:5002/path', path).subscribe(data =>
+       {
+         console.log(data);
+       });
+   }
 
   uploadFile(files: File[]) {
     console.log(files)
