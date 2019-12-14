@@ -14,10 +14,12 @@ export class AppComponent {
   percentDone: number;
   uploadSuccess: boolean;
   path:string;
+  poketype:string;
   constructor(private httpClient: HttpClient) {
   }
 
   ngOnInit() {
+    this.poketype = "";
   }
 
    focusoutHandler(path: string) {
@@ -27,7 +29,9 @@ export class AppComponent {
        this.httpClient.post('http://127.0.0.1:5002/path', path).subscribe(data =>
        {
          console.log(data);
+         this.poketype = data.text;
        });
+
    }
 
   uploadFile(files: File[]) {
@@ -35,7 +39,7 @@ export class AppComponent {
     var formData = new FormData();
     Array.from(files).forEach(f => formData.append('file',f))
 
-    this.httpClient.post('http://127.0.0.1:5002/file', formData).subscribe(data => {
+    this.httpClient.post('http://127.0.0.1:5002/file', formData, {reportProgress:true}).subscribe(data => {
       console.log(data);
     });
   }

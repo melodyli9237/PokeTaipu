@@ -1,24 +1,30 @@
 <div style="text-align:center">
   <h1>
-    Welcome to Angular + Python + Flask Demo!
+    PokeTaipu
   </h1>
 </div>
 
 <div>
-  <button (click)="sayHi()">Say Hi</button>
-  <span>Server data: {{serverData | json}}</span>
+  <h2>
+    Come on check out your Pokemon type!
+  </h2>
 </div>
-{{percentDone}}
-<div>
-  <button (click)="getAllEmployees()">All Employees</button>
-  <span>All Employee data: {{employeeData | json}}</span>
-</div>
+  <h3>
+    Choose your picture
+  </h3>
 
-<div>
-  <button (click)="getEmployee()">Employees By ID</button>
-  <span>Employee data: {{employee | json}}</span>
-</div>
 <input type="file" (change)="uploadFile($event.target.files)">
 <div>
   <input type="text" (keyup.enter)="focusoutHandler($event.target.value)"/>
+</div>
+<div>
+  Your poketaipu is : {{poketype}}
+</div>
+
+<div>
+  <img src="assets/pokemons.jpeg"  width="475" height="228">
+</div>
+
+<div>
+  <img src="assets/types.png"  width="304" height="228">
 </div>
