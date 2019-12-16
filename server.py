@@ -5,6 +5,10 @@ from flask_restful import Resource, Api
 from json import dumps
 from flask_jsonpify import jsonify
 from test_model import run_classifier
+import sys
+sys.path.insert(1, '/Users/melodyli/Downloads/PokeTaipu-master/DataCleaning/')
+import model
+from model import classify
 
 
 app = Flask(__name__)
@@ -30,7 +34,12 @@ def analysePath():
     print("additional data")
     print(request.data)
     print(run_classifier(request.data))
-    return jsonify({'text':run_classifier(request.data)})
+    typeIndex = classify(request.data)
+    return jsonify({'text':toType(typeIndex)})
+
+def toType(index):
+    typeList = ["Fire", "Water", "Grass", "Eletric", "Psychic", "Steel", "Normal", "Fairy", "Dark", "Flying", "Ghost", "Poison", "Ice", "Ground", "Rock", "Dragon", "Fighting","Bug"]
+    return typeList[index]
 
 if __name__ == '__main__':
      app.run(port=5002)
