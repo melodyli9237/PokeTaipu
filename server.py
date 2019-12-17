@@ -4,9 +4,9 @@ from flask_cors import CORS, cross_origin
 from flask_restful import Resource, Api
 from json import dumps
 from flask_jsonpify import jsonify
-from test_model import run_classifier
 import sys
-sys.path.insert(1, '/Users/melodyli/Downloads/PokeTaipu-master/DataCleaning/')
+sys.path.insert(1, '/Users/melodyli/Desktop/newproj/PokeTaipu-master 2/Data Cleaning & Deep Learning Models/')
+# sys.path.insert(1, '/PokeTaipu-master 2/Data Cleaning % Deep Learning Models/')
 import model
 from model import classify
 
@@ -33,7 +33,6 @@ def analysePath():
     print("user input path received")
     print("additional data")
     print(request.data)
-    print(run_classifier(request.data))
     typeIndex = classify(request.data)
     return jsonify({'text':toType(typeIndex)})
 

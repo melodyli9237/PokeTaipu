@@ -35,13 +35,13 @@ export class AppComponent {
    }
 
   uploadFile(e) {
-    console.log(e);
-    console.log(document.getElementById("xuanbaobao").files[0]); 
-    this.path = e.target.value;
-    this.httpClient.post('http://127.0.0.1:5002/path', this.path).subscribe(data =>
-    {
-      this.poketype = data.text;
-    });
+    // console.log(e);
+    // console.log(document.getElementById("xuanbaobao").files[0]);
+    // this.path = e.target.value;
+    // this.httpClient.post('http://127.0.0.1:5002/path', this.path).subscribe(data =>
+    // {
+    //   this.poketype = data.text;
+    // });
     // this.httpClient.post('http://127.0.0.1:5002/file', formData, {reportProgress:true}).subscribe(data => {
     //   console.log(data);
     // });

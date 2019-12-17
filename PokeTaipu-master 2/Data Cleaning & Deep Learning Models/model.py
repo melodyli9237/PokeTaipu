@@ -17,7 +17,7 @@ import random
 
 
 class Net(nn.Module):
-    def __init__(self): 
+    def __init__(self):
         super(Net, self).__init__()
         self.conv1 = nn.Conv2d(3, 16, 3, 1)
         self.conv2 = nn.Conv2d(16, 28, 3, 1)
@@ -34,7 +34,7 @@ class Net(nn.Module):
         x = self.conv2(x)
         x = F.max_pool2d(x, 2)
         x = self.conv3(x)
-        x = F.max_pool2d(x, 2)  
+        x = F.max_pool2d(x, 2)
         x = torch.flatten(x, 1)
         x = self.fc1(x)
         x = F.relu(x)
@@ -179,7 +179,7 @@ def classify(path):
 
     # Load the saved model and classify the image by running a forward pass
     model = Net()
-    model.load_state_dict(torch.load('poketaipu_cnn.pt'))
+    model.load_state_dict(torch.load('/Users/melodyli/Desktop/newproj/PokeTaipu-master 2/poketaipu_cnn.pt'))
     output = model(I)
     pred = output.argmax()
 
