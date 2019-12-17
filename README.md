@@ -54,3 +54,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 1. Angular+Python Flask https://medium.com/@balramchavan/angular-python-flask-full-stack-demo-27192b8de1a3
 2. Angular Tutorial https://angular.io/start
 3. Model code https://github.com/pytorch/examples/blob/master/mnist/main.py
+4. Pytorch Tutorial for Deep Learning Lovers https://www.kaggle.com/kanncaa1/pytorch-tutorial-for-deep-learning-lovers
+5. Data source, Pokemon with stats https://www.kaggle.com/abcsds/pokemon
+6. Deep Residual Learning for Image Recognition https://arxiv.org/abs/1512.03385
