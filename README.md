@@ -1,4 +1,5 @@
-# PokeTaipu
+# PokeTaipu - PokeTaipuSRC
+Branched from repository: https://github.com/garyyjn/PokeTaipu
 Final Project for EECS 600, Deep Learning @CWRU
 
 typeList = ["Fire", "Water", "Grass", "Eletric", "Psychic", "Steel", "Normal", "Fairy", "Dark", "Flying", "Ghost", "Poison", "Ice", "Ground", "Rock", "Dragon", "Fighting","Bug"]
@@ -14,17 +15,12 @@ https://www.kaggle.com/abcsds/pokemon
 ## Training TO-DO
 ### Data cleaning
 - [x] generate RGB matrixes for image
-- [ ] assign type to each image
-- [ ] Write scripts that convert both JPG and PNG to numpy arrays sized 224 * 224 * 3
-- [ ] Generate data matrixes/labels of various sizes
+- [x] assign type to each image
+- [x] Write scripts that convert both JPG and PNG to numpy arrays sized 224 * 224 * 3
+- [x] Generate data matrixes/labels of various sizes
 
 ### Model Building
-- [ ] Build a shallow 2 layer conv model
-
-
-## Webfront TO-DO
-
-
+- [x] Build a shallow 2 layer conv model
 
 # PokeTaipu Web Application
 
@@ -53,3 +49,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# Reference
+1. Angular+Python Flask https://medium.com/@balramchavan/angular-python-flask-full-stack-demo-27192b8de1a3
+2. Angular Tutorial https://angular.io/start
+3. Model code https://github.com/pytorch/examples/blob/master/mnist/main.py
