@@ -179,7 +179,7 @@ def classify(path):
 
     # Load the saved model and classify the image by running a forward pass
     model = Net()
-    model.load_state_dict(torch.load('/Users/melodyli/Desktop/newproj/PokeTaipu-master 2/poketaipu_cnn.pt'))
+    model.load_state_dict(torch.load('/Users/melodyli/Desktop/newproj/PokeTaipuSRC/poketaipu_cnn.pt'))
     output = model(I)
     pred = output.argmax()
 

@@ -5,7 +5,7 @@ from flask_restful import Resource, Api
 from json import dumps
 from flask_jsonpify import jsonify
 import sys
-sys.path.insert(1, '/Users/melodyli/Desktop/newproj/PokeTaipu-master 2/Data Cleaning & Deep Learning Models/')
+sys.path.insert(1, '/Users/melodyli/Desktop/newproj/PokeTaipuSRC/Data Cleaning & Deep Learning Models/')
 # sys.path.insert(1, '/PokeTaipu-master 2/Data Cleaning % Deep Learning Models/')
 import model
 from model import classify
