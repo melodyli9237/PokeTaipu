@@ -3,6 +3,8 @@ Branched from repository: https://github.com/garyyjn/PokeTaipu
 
 Final Project for EECS 600, Deep Learning @CWRU
 
+A formal report with further implementation details of the project could be found in `./PokeTaipu Final Report.pdf`.
+
 Contributors:
 Yihe Guo, Melody Li, Yue Shu, Roxanne Yang, Gary Yao.
 
