@@ -22,6 +22,7 @@ export class AppComponent {
     this.poketype = "";
   }
 
+   // Send request after local is entered
    focusoutHandler(path: string) {
        this.path = path;
        console.log(event);
@@ -34,16 +35,7 @@ export class AppComponent {
 
    }
 
+  // Explored upload file but did not work
   uploadFile(e) {
-    // console.log(e);
-    // console.log(document.getElementById("xuanbaobao").files[0]);
-    // this.path = e.target.value;
-    // this.httpClient.post('http://127.0.0.1:5002/path', this.path).subscribe(data =>
-    // {
-    //   this.poketype = data.text;
-    // });
-    // this.httpClient.post('http://127.0.0.1:5002/file', formData, {reportProgress:true}).subscribe(data => {
-    //   console.log(data);
-    // });
   }
 }

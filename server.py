@@ -28,6 +28,7 @@ def analyseFile():
     print(request.FormData.files)
     return jsonify({'text':'Hello World!'})
 
+# This calls classify function which is imported from PokeTaipuSRC
 @app.route('/path', methods = ['POST'])
 def analysePath():
     print("user input path received")
